@@ -1,12 +1,12 @@
-Source: hello
+Source: hellocross
 Section: misc
 Priority: extra
 Maintainer: Baurzhan Ismagulov <ibr@radix50.net>
 Build-Depends: debhelper (>= 9), autotools-dev
 Standards-Version: 3.9.5
-Homepage: https://github.com/ilbers/hello
+Homepage: https://github.com/mcharleb/hellocross
 
-Package: hello
+Package: hellocross
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Sample application
