@@ -2,10 +2,10 @@ DB2MAN = docbook-to-man
 RM = rm
 
 bin_PROGRAMS = hellocross
-hello_SOURCES = hellocross.c
+hellocross_SOURCES = hellocross.c
 man1_MANS = hellocross.1
 
-hello.1: hellocross.sgml
+hellocross.1: hellocross.sgml
 	$(DB2MAN) $< >$@
 
 clean-local:
