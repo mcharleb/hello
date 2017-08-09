@@ -1,2 +1,2 @@
-?package(hello):needs="X11|text|vc|wm" section="Applications/text"\
-  title="hello" command="/usr/bin/hello"
+?package(hellocross):needs="X11|text|vc|wm" section="Applications/text"\
+  title="hellocross" command="/usr/bin/hellocross"
