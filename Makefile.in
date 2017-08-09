@@ -76,7 +76,7 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = hello$(EXEEXT)
+bin_PROGRAMS = hellocross$(EXEEXT)
 subdir = .
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/configure $(am__configure_deps) \
@@ -94,9 +94,9 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_hello_OBJECTS = hello.$(OBJEXT)
-hello_OBJECTS = $(am_hello_OBJECTS)
-hello_LDADD = $(LDADD)
+am_hellocross_OBJECTS = hellocross.$(OBJEXT)
+hellocross_OBJECTS = $(am_hellocross_OBJECTS)
+hellocross_LDADD = $(LDADD)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -125,8 +125,8 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(hello_SOURCES)
-DIST_SOURCES = $(hello_SOURCES)
+SOURCES = $(hellocross_SOURCES)
+DIST_SOURCES = $(hellocross_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -287,8 +287,8 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 DB2MAN = docbook-to-man
 RM = rm
-hello_SOURCES = hello.c
-man1_MANS = hello.1
+hellocross_SOURCES = hellocross.c
+man1_MANS = hellocross.1
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
@@ -386,9 +386,9 @@ uninstall-binPROGRAMS:
 clean-binPROGRAMS:
 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
 
-hello$(EXEEXT): $(hello_OBJECTS) $(hello_DEPENDENCIES) $(EXTRA_hello_DEPENDENCIES) 
-	@rm -f hello$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(hello_OBJECTS) $(hello_LDADD) $(LIBS)
+hellocross$(EXEEXT): $(hellocross_OBJECTS) $(hellocross_DEPENDENCIES) $(EXTRA_hellocross_DEPENDENCIES) 
+	@rm -f hellocross$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(hellocross_OBJECTS) $(hellocross_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -396,7 +396,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hello.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hellocross.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -807,7 +807,7 @@ uninstall-man: uninstall-man1
 	uninstall-man1
 
 
-hello.1: hello.sgml
+hellocross.1: hellocross.sgml
 	$(DB2MAN) $< >$@
 
 clean-local:
