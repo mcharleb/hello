@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: hello
-Source: https://github.com/ilbers/hello
+Upstream-Name: hellocross
+Source: https://github.com/mcharleb/hellocross
 
 Files: *
 Copyright: 2016 ilbers GmbH
